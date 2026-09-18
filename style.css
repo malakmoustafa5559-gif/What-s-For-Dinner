@@ -1,0 +1,644 @@
+body {
+    font-family: system-ui;
+    background: linear-gradient(
+        to bottom right,
+        #fff8ed,
+        #fffbeb
+    );
+
+}
+
+:root{
+    --main-color:#ff6900 ;
+    --second-color:#6a7282;
+    --third-color:#ffedd4;
+}
+
+/*navbar*/
+
+.navbar {
+    padding: 12px 60px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.navbar .container-fluid {
+    padding: 0;
+}
+
+.container-fluid .nav-right .icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #f97316, #dc2626);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+                0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+.container-fluid .nav-right .icon i {
+    color: white;
+    font-size: 20px;
+}
+
+.container-fluid .nav-right .text h5 {
+    font-size: 23px;
+    margin-bottom: 0;
+}
+
+.container-fluid .nav-right .text p {
+    color: var(--second-color);
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.navbar .navbar-toggler {
+    border: none;
+    padding: 4px 8px;
+    color: var(--second-color);
+    box-shadow: none;
+}
+
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.container-fluid .nav-left .nav-link-item {
+    text-decoration: none;
+    color: var(--second-color);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 6px 0;
+    transition: color 0.2s;
+}
+
+.container-fluid .nav-left .nav-link-item:hover {
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+.container-fluid .nav-left i {
+    font-size: 18px;
+    width: 22px;              
+    text-align: center;
+    color: inherit;         
+}
+
+.container-fluid .nav-left .image img {
+    width: 38px;
+    border: 2px solid #ffb86a;
+    border-radius: 50px;
+    display: block;
+}
+
+.container-fluid .dinner {
+    max-width: 1200px;
+   margin: auto;
+   border-radius: 20px;
+}
+
+.container-fluid .dinner .first-meal .image img{
+    width: 492px;
+    height: 750px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+/* first-meal */
+.container-fluid .dinner .first-meal {
+    margin-bottom: 38px;
+}
+.container-fluid .dinner .first-meal .image .review {
+    top: 16px;
+    left: 16px;
+    align-items: center;
+    gap: 6px;
+    background: white;
+    padding: 8px 16px;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.container-fluid .dinner .first-meal .image .review i {
+    color: #fbbf24;
+}
+
+.container-fluid .dinner .first-meal .image .review p {
+    margin-bottom: 0;
+}
+
+.container-fluid .dinner .first-meal .image .review p:first-child {
+    font-weight: 600;
+}
+
+.container-fluid .dinner .first-meal .image .review p:last-child {
+    color: var(--second-color);
+    font-size: 14px;
+}
+.container-fluid .dinner .first-meal .dinner-right {
+    /* flex: 1;
+    max-height: 750px;
+    overflow-y: auto;
+    padding-right: 12px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px; */
+    flex: 1;
+    max-height: 750px;
+    overflow-y: auto;
+    padding-right: 12px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.container-fluid .dinner .dinner-right .tabs-content .tab-pane {
+    max-height: 368px;
+    overflow-y: auto;
+}
+.container-fluid .dinner .dinner-right .tabs-content .tab-pane.compact-scroll {
+    max-height: none;
+    overflow-y: visible;
+}
+.container-fluid .dinner .first-meal .dinner-right::-webkit-scrollbar,
+.container-fluid .dinner .dinner-right .tabs-content .tab-pane::-webkit-scrollbar {
+    width: 6px;
+}
+.container-fluid .dinner .first-meal .dinner-right::-webkit-scrollbar-thumb,
+.container-fluid .dinner .dinner-right .tabs-content .tab-pane::-webkit-scrollbar-thumb {
+    background-color: #FFDBD2;
+    border-radius: 10px;
+}
+.container-fluid .dinner .first-meal .dinner-right::-webkit-scrollbar-track,
+.container-fluid .dinner .dinner-right .tabs-content .tab-pane::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.container-fluid .dinner .first-meal .image .info {
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 85px;
+    background: white;
+    border-radius: 16px;
+    padding: 16px 28px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    width: 86%;
+}
+
+.dinner-right .text .pargraph .text1 p {
+    color: #008236;
+    background: #dcfce7;
+    padding: 6px 14px;
+    border-radius: 23px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.dinner-right .text .icons .book-mark , .share-nodes{
+    background-color: var(--third-color);
+    padding: 11px 14px;
+    border-radius: 7px;
+}
+.dinner-right .text .icons .book-mark:hover , .share-nodes:hover{
+    cursor: pointer;
+    background-color: #ffd7a8;
+}
+
+.dinner-right .text .icons i{
+    color: var(--main-color);
+    font-size: 15px;
+}
+
+.dinner-right .text .pargraph .text1 .sea{
+    background-color: #dbeafe;
+    color: #1447e6;
+}
+.dinner-right .text .pargraph .text2 .text h5{
+    font-size: 37px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.dinner-right .text .pargraph .text2 .text p{
+    color: var(--second-color);
+}
+
+.container-fluid .dinner .first-meal .image .info .clock {
+    text-align: center;
+}
+
+.container-fluid .dinner .first-meal .image .info .clock i {
+    display: block;
+    margin: 0 auto 6px;
+    font-size: 22px;
+    color: var(--main-color);
+}
+.container-fluid .dinner .first-meal .image .info .fire i{
+    color: #fb2c36;
+}
+.container-fluid .dinner .first-meal .image .info .people i{
+    color: #2b7fff;
+}
+
+.container-fluid .dinner .first-meal .image .info .clock p {
+    margin-bottom: 0;
+    font-size: 13px;
+    color: var(--second-color);
+}
+
+.container-fluid .dinner .first-meal .image .info .clock p:last-child {
+    font-weight: 700;
+    color: #111827;
+    font-size: 15px;
+}
+
+
+.tabs .nav-underline {
+    gap: 36px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 20px;
+}
+
+.tabs .nav-item {
+    border-bottom: 2px solid transparent;
+    /* padding-bottom: 10px; */
+    padding-bottom: 15px;
+}
+
+
+.tabs .nav-item:has(.nav-link.active) {
+    border-bottom-color: var(--main-color);
+    margin-bottom: -1px;
+}
+
+.tabs .nav-link {
+    padding: 0;
+    border: none;
+    color: var(--second-color);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.tabs .nav-link.active {
+    color: var(--main-color);
+    background: transparent;
+}
+
+.tabs .nav-item i {
+    color: var(--second-color);
+    font-size: 14px;
+}
+.tabs .nav-item:not(:has(.nav-link.active)):hover .nav-link,
+.tabs .nav-item:not(:has(.nav-link.active)):hover i {
+    color:#364153;
+}
+
+.tabs .nav-item:has(.nav-link.active) i {
+    color: var(--main-color);
+}
+.container-fluid .dinner .dinner-right .tabs-content .Ingredients{
+    background: linear-gradient(to bottom right, #fff8ed, #fffbeb);
+    padding: 17px 17px;
+    margin-top: 20px;
+    width: 87%;
+
+    border-radius: 20px;
+ 
+}
+
+.container-fluid .dinner .dinner-right .tabs-content .Ingredients .num1 .one{
+    color: white;
+    background-color: var(--main-color);
+    padding: 8px;
+    width: 27px;
+    height: 27px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container-fluid .dinner .dinner-right .tabs-content .Ingredients .num1 p{
+    color: var(--second-color);
+}
+.container-fluid .dinner .dinner-right .tabs-content .Instructions .onee{
+    background-color: var(--main-color);
+    color:white;
+    padding: 23px;
+    border-radius: 12px;
+    width: 33px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+.container-fluid .dinner .dinner-right .tabs-content .Instructions .cook p{
+    color: var(--second-color);
+    width: 589px;
+}
+
+
+.container-fluid .dinner .first-meal .dinner-right .tabs-content .Nutrition {
+    margin-top: 20px;
+    /* width: 93%; */
+    width: 100%;
+}
+
+.container-fluid .dinner .first-meal .dinner-right .tabs-content .Nutrition .nutrition-row {
+    display: flex;
+    gap: 16px;
+}
+
+.container-fluid .dinner .first-meal .dinner-right .tabs-content .Nutrition .nutrition-row .nutrition-card {
+    /* width: 50%; */
+    width: calc(50% - 8px);
+    height: 72px;
+    background-color: #f9fafb;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    gap: 12px;
+}
+
+.container-fluid .dinner .first-meal .dinner-right .tabs-content .Nutrition .nutrition-row .nutrition-card .nutrition-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .tabs-content .Nutrition .nutrition-row .nutrition-card .nutrition-icon i {
+    font-size: 18px;
+}
+
+ .tabs-content .Nutrition .nutrition-row .nutrition-card .calories-icon {
+    background-color: #ffedd4;
+}
+
+.tabs-content .Nutrition .nutrition-row .nutrition-card .calories-icon i {
+    color: var(--main-color);
+}
+
+ .tabs-content .Nutrition .nutrition-row .nutrition-card .protein-icon {
+    background-color: #dbeafe;
+}
+
+.tabs-content .Nutrition .nutrition-row .nutrition-card .protein-icon i {
+    color: #2563eb;
+}
+
+.tabs-content .Nutrition .nutrition-row .nutrition-card p {
+    margin: 0;
+    color: #172033;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+ .tabs-content .Nutrition .nutrition-row .nutrition-card span {
+    margin-left: auto;
+    color: #111827;
+    font-size: 20px;
+    font-weight: 700;
+}
+ .tabs-content .Nutrition .nutrition-row .nutrition-card .icon2 {
+    background-color: #fef9c2;
+}
+
+.tabs-content .Nutrition .nutrition-row .nutrition-card .icon2 i {
+    color: #d08700;
+}
+ .tabs-content .Nutrition .nutrition-row .nutrition-card .icon3 {
+    background-color: #ffe2e2;
+}
+
+.tabs-content .Nutrition .nutrition-row .nutrition-card .icon3 i {
+    color: #e7000b;
+}
+ .tabs-content .Nutrition .nutrition-row .nutrition-card .icon4 {
+    background-color: #dcfce7;
+}
+
+.tabs-content .Nutrition .nutrition-row .nutrition-card .icon4 i {
+    color: #00a63e;
+}
+ .tabs-content .Nutrition .nutrition-row .nutrition-card .icon5 {
+    background-color: #fce7f3;
+}
+
+.tabs-content .Nutrition .nutrition-row .nutrition-card .icon5 i {
+    color: #e60076;
+}
+.tip{
+      background: linear-gradient(
+        to bottom right,
+        #fff8ed,
+        #fffbeb
+    );
+  
+    width: 100%;
+    border-radius: 20px;
+    padding: 16px;
+    border-left: 5px solid #ffb900;
+}
+
+.tip .icon {
+    background: #e17100;
+    border-radius: 50px;
+    width: 24px;
+    height: 24px;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tip .icon i{
+    color: white;
+}
+
+.tip p {
+    color: #364153;
+}
+
+.but{
+    border-top: 1px solid #e5e7eb;
+    padding-top: 20px;
+    width: 87%;
+    margin-left: 19px;
+}
+.but button {
+    background: linear-gradient(to right, #f97316, #ef4444);
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+    padding: 13px;
+    transition: transform 0.3s ease;
+}
+ .but button:hover {
+    background: linear-gradient(to right, #ea580c, #dc2626);
+    transform: scale(1.05);
+}
+ .but button i{
+color: white;
+}
+.dinner-right .text .perperation {
+    background: #fef2f2;
+    border-radius: 20px;
+    width: 90%;
+    border-left: 4px solid #fb2c36;
+    padding: 16px;
+}
+
+.dinner-right .text .perperation i{
+    color: #fb2c36;
+    font-size: 20px;
+}
+.dinner-right .text .perperation .words p:first-child{
+    font-weight: bold;
+    color: #9f0712;
+}
+.dinner-right .text .perperation .words p:last-child{
+    color: #e7000b;
+}
+
+.hidden-meal {
+    display: none !important;
+}
+
+
+
+@media (max-width: 991.98px) {
+
+    .container-fluid .dinner .first-meal {
+        flex-direction: column;
+        gap: 0 !important;
+    }
+
+    .container-fluid .dinner .first-meal .image {
+        width: 100%;
+    }
+
+    .container-fluid .dinner .first-meal .image img {
+        width: 100%;
+        height: 380px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .container-fluid .dinner .first-meal .image .info {
+        width: 92%;
+        gap: 12px;
+        padding: 12px 16px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .container-fluid .dinner .first-meal .dinner-right {
+        flex: none;
+        max-height: none;
+        overflow-y: visible;
+        padding-right: 0;
+        width: 100%;
+    }
+
+    .container-fluid .dinner .dinner-right .tabs-content .tab-pane {
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    .dinner-right .text .pargraph .text2 .text h5 {
+        font-size: 28px;
+    }
+
+    .container-fluid .dinner .dinner-right .tabs-content .Ingredients,
+    .dinner-right .text .perperation {
+        width: 100%;
+    }
+
+    .container-fluid .dinner .dinner-right .tabs-content .Instructions .cook p {
+        width: 100%;
+    }
+
+    .dinner .but {
+        position: static !important;
+        width: 100%;
+        left: auto;
+        bottom: auto;
+        padding: 20px 16px 0;
+    }
+
+}
+
+
+@media (max-width: 767.98px) {
+    .navbar {
+        padding: 12px 20px;
+    }
+    .container-fluid .nav-right .text p {
+        display: none;
+    }
+
+}
+
+@media (max-width: 575.98px) {
+    .navbar {
+        padding: 10px 14px;
+    }
+    .container-fluid .nav-right .text h5 {
+        font-size: 18px;
+    }
+
+    .container-fluid .nav-right .text p {
+        display: none;
+    }
+
+    .container-fluid .dinner .first-meal .image img {
+        height: 260px;
+    }
+
+    .container-fluid .dinner .first-meal .image .info {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .container-fluid .dinner .first-meal .image .info .clock i {
+        font-size: 18px;
+    }
+
+    .container-fluid .dinner .first-meal .image .info .clock p:last-child {
+        font-size: 12px;
+    }
+
+    .dinner-right .text .pargraph .text2 {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 10px;
+    }
+
+    .dinner-right .text .pargraph .text2 .text h5 {
+        font-size: 24px;
+    }
+
+    .tabs .nav-underline {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .tabs .nav-link {
+        font-size: 13px;
+    }
+
+    .tabs-content .Nutrition .nutrition-row {
+        flex-direction: column;
+    }
+
+    .tabs-content .Nutrition .nutrition-row .nutrition-card {
+        width: 100%;
+    }
+
+    .container-fluid .dinner .first-meal .dinner-right .tabs-content .Nutrition .nutrition-row .nutrition-card {
+        width: 92%;
+    }
+
+}

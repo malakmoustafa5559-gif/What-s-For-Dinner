@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's For Dinner</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-sm bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <div class="nav-right d-flex align-items-center gap-2">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <div class="text">
+                        <h5 class="fw-bold">What's For Dinner</h5>
+                        <p>Your daily meal inspiration</p>
+                    </div>
+
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <div
+                    class="nav-left d-flex flex-column flex-sm-row align-items-stretch align-items-sm-center gap-3 gap-sm-4 ms-auto mt-3 mt-sm-0">
+                    <a href="#" class="nav-link-item d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-bookmark"></i>
+                        <span class="d-sm-none">Saved Recipes</span>
+                    </a>
+
+                    <a href="#" class="nav-link-item d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <span class="d-sm-none">Recent</span>
+                    </a>
+
+                    <a href="#" class="nav-link-item d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-gear"></i>
+                        <span class="d-sm-none">Settings</span>
+                    </a>
+
+                    <a href="#" class="nav-link-item d-flex align-items-center gap-3">
+                        <div class="image">
+                            <img src="images/avatar-4.jpg" alt="human">
+                        </div>
+                        <span class="d-sm-none">Profile</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+    
+    <!-- diner-section -->
+    <div class="container-fluid ">
+        <div class="dinner bg-white  mt-5 position-relative">
+
+            <!-- single meal (populated dynamically by index.js) -->
+            <div class="first-meal d-flex gap-5 justify-content-start align-items-start">
+                <div class="image position-relative">
+                    <img id="recipe-image" src="images/photo-1633504581786-316c8002b1b9.avif" alt="recipe">
+                    <div class="review d-flex  position-absolute  ">
+                        <i class="fa-solid fa-star"></i>
+                        <p id="rating-average">4.8</p>
+                        <p id="rating-quantity">(356 reviews)</p>
+                    </div>
+                    <div class="info d-flex position-absolute">
+                        <div class="clock">
+                            <i class="fa-solid fa-clock"></i>
+                            <p>Prep Time</p>
+                            <p id="prep-time-display">10 min</p>
+                        </div>
+                        <div class="clock fire">
+                            <i class="fa-solid fa-fire-burner"></i>
+                            <p>Cook Time</p>
+                            <p id="cook-time-display">15 min</p>
+                        </div>
+                        <div class="clock people">
+                            <i class="fa-solid fa-users"></i>
+                            <p>Servings</p>
+                            <p id="servings-display">2 people</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dinner-right">
+                    <div class="text">
+                        <div class="pargraph">
+                            <div class="text1 d-flex gap-3 mt-5">
+                                <p id="difficulty-badge">Easy</p>
+                                <p class="sea" id="category-badge">Seafood</p>
+                            </div>
+                            <div class="text2 d-flex justify-content-between align-items-center ">
+                                <div class="text">
+                                    <h5 id="recipe-name">Shrimp Scampi</h5>
+                                    <p id="recipe-description">Garlicky shrimp in white wine butter sauce</p>
+                                </div>
+                                <div class="icons d-flex me-5 gap-3">
+                                    <div class="book-mark">
+                                        <i class="fa-solid fa-bookmark"></i>
+                                    </div>
+                                    <div class="share-nodes">
+                                        <i class="fa-solid fa-share-nodes"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- shown only for recipes with totalTime > 45 min -->
+                            <div class="perperation mb-2 d-none" id="time-warning">
+                                <div class="text d-flex justify-content-center align-items-center gap-2">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    <div class="words">
+                                        <p class="mb-0">Extended Preparation Time</p>
+                                        <p class="mb-0">This recipe requires more than 45 minutes to prepare. Plan
+                                            accordingly!</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tabs">
+                        <ul class="nav nav-underline">
+
+                            <li class="nav-item d-flex justify-content-center align-items-center gap-2">
+                                <i class="fa-solid fa-list-check"></i>
+                                <a class="nav-link active" data-bs-toggle="tab" href="#ingredients">
+                                    Ingredients
+                                </a>
+                            </li>
+
+                            <li class="nav-item d-flex justify-content-center align-items-center gap-2">
+                                <i class="fa-solid fa-book-open"></i>
+                                <a class="nav-link" data-bs-toggle="tab" href="#instructions">
+                                    Instructions
+                                </a>
+                            </li>
+
+                            <li class="nav-item d-flex justify-content-center align-items-center gap-2">
+                                <i class="fa-solid fa-chart-pie"></i>
+                                <a class="nav-link" data-bs-toggle="tab" href="#nutrition">
+                                    Nutrition
+                                </a>
+                            </li>
+
+                            <li class="nav-item d-flex justify-content-center align-items-center gap-2">
+                                <i class="fa-solid fa-lightbulb"></i>
+                                <a class="nav-link" data-bs-toggle="tab" href="#tips">
+                                    Chef's Tips
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="tabs-content tab-content">
+                        <div class="Ingredients tab-pane fade show active" id="ingredients">
+                            <!-- ingredient rows injected here by index.js -->
+                            <div id="ingredients-list"></div>
+                        </div>
+                        <div class="Instructions tab-pane fade mt-3" id="instructions">
+                            <!-- instruction steps injected here by index.js -->
+                            <div id="instructions-list"></div>
+                        </div>
+
+                        <div class="Nutrition tab-pane fade" id="nutrition">
+
+                            <div class="nutrition-row">
+                                <div class="nutrition-card">
+                                    <div class="nutrition-icon calories-icon">
+                                        <i class="fa-solid fa-fire"></i>
+                                    </div>
+                                    <p>Calories</p>
+                                    <span id="calories-value">520 kcal</span>
+                                </div>
+
+                                <div class="nutrition-card">
+                                    <div class="nutrition-icon protein-icon">
+                                        <i class="fa-solid fa-dumbbell"></i>
+                                    </div>
+                                    <p>Protein</p>
+                                    <span id="protein-value">36g</span>
+                                </div>
+
+                            </div>
+
+                            <div class="nutrition-row mt-3">
+                                <div class="nutrition-card">
+                                    <div class="nutrition-icon calories-icon icon2">
+                                        <i class="fa-solid fa-wheat-awn"></i>
+                                    </div>
+                                    <p>Carbohydrates</p>
+                                    <span id="carbs-value">54g</span>
+                                </div>
+
+                                <div class="nutrition-card">
+                                    <div class="nutrition-icon protein-icon icon3">
+                                        <i class="fa-solid fa-droplet"></i>
+                                    </div>
+                                    <p>Fat</p>
+                                    <span id="fat-value">18g</span>
+                                </div>
+
+                            </div>
+
+                            <div class="nutrition-row mt-3">
+                                <div class="nutrition-card">
+                                    <div class="nutrition-icon calories-icon icon4">
+                                        <i class="fa-solid fa-seedling"></i>
+                                    </div>
+                                    <p>Fiber</p>
+                                    <span id="fiber-value">3g</span>
+                                </div>
+
+                                <div class="nutrition-card">
+                                    <div class="nutrition-icon protein-icon icon5">
+                                        <i class="fa-solid fa-cube"></i>
+                                    </div>
+                                    <p>Sodium</p>
+                                    <span id="sodium-value">620mg</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="Tips tab-pane fade" id="tips">
+                            <!-- tip rows injected here by index.js -->
+                            <div id="tips-list"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="but mt-5 ">
+                        <button class="tryAnotherBtn" id="try-another-btn">
+                            <div class="text d-flex justify-content-center align-items-center gap-3">
+                                <i class="fa-solid fa-arrows-rotate"></i>
+                                <p class="mb-0 text-white">Try Another Recipe</p>
+                            </div>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
